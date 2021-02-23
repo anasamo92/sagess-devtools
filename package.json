@@ -1,6 +1,6 @@
 {
     "name": "sagess-devtools",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Sagess devtools",
     "main": "index.js",
     "scripts": {
