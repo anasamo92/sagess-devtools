@@ -1,0 +1,53 @@
+{
+    "name": "sagess-devtools",
+    "version": "1.0.8",
+    "description": "Focus devtools",
+    "main": "index.js",
+    "scripts": {
+        "build": "better-npm-run babelify",
+        "test": "npm run build"
+    },
+    "betterScripts": {
+        "babelify": {
+            "command": "babel src/ --out-dir .",
+            "env": {
+                "BABEL_ENV": "production",
+                "LEGACY_EXPORTS": "true"
+            }
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/anasamo92/sagess-devtools.git"
+    },
+    "keywords": [
+        "react",
+        "redux",
+        "data",
+        "sagess"
+    ],
+    "license": "MIT",
+    "babel": {
+        "presets": [
+            "sagess"
+        ]
+    },
+    "devDependencies": {
+        "babel-cli": "6.26.0",
+        "babel-preset-sagess": "^1.0.2",
+        "better-npm-run": "0.1.0",
+        "eslint-config-sagess": "^1.0.2",
+        "prop-types": "15.6.1",
+        "react": "16.2.0",
+        "react-dom": "16.2.0"
+    },
+    "dependencies": {
+        "redux": "3.7.2",
+        "react-redux": "5.0.7",
+        "react-json-tree": "0.11.0",
+        "redux-thunk": "2.2.0",
+        "react-dock": "0.2.4",
+        "redux-logger": "3.0.6",
+        "parse-key": "0.2.1"
+    }
+}
