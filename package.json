@@ -1,7 +1,7 @@
 {
     "name": "sagess-devtools",
-    "version": "1.0.8",
-    "description": "Focus devtools",
+    "version": "0.0.1",
+    "description": "Sagess devtools",
     "main": "index.js",
     "scripts": {
         "build": "better-npm-run babelify",
