@@ -1,6 +1,0 @@
-{
-    "extends": "sagess",
-    "rules": {
-        "require-jsdoc": "off"
-    }
-}
