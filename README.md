@@ -34,8 +34,8 @@ You have two components at your disposal:
 
 ```javascript
 import dispatchLogger from 'focus-dev-tools/logger/dispatch-logger';
-import dispatcher from 'focus-core/dispatcher';
-import CoreStore from 'focus-core/stores/CoreStore'
+import dispatcher from 'sagess-core/dispatcher';
+import CoreStore from 'sagess-core/stores/CoreStore'
 
 dispatchLogger(dispatcher, () => CoreStore._instances);
 ```
@@ -46,15 +46,15 @@ dispatchLogger(dispatcher, () => CoreStore._instances);
 
 import FocusDevTools from 'sagess-devtools';
 import React from 'react';
-import history from 'focus-core/history';
-import CoreStore from 'focus-core/store/CoreStore'
+import history from 'sagess-core/history';
+import CoreStore from 'sagess-core/store/CoreStore'
 
 
 const devTools = () => <FocusDevTools
                         isPanel /* If you want to embed the component in a DOck */
                         toggleVisibilityKey={'ctrl-m'}  /*How do you want to display the dev tool*/
-                        routes={history.handlers}  /* A list of all your routes (`focus-core/router/history`)*/
-                        getStores={() => CoreStore.prototype._instances} /* A list of all your stores (`focus-core/CoreStore._instances`)*/
+                        routes={history.handlers}  /* A list of all your routes (`sagess-core/router/history`)*/
+                        getStores={() => CoreStore.prototype._instances} /* A list of all your stores (`sagess-core/CoreStore._instances`)*/
                         isDebugDevTools={false} /* If you want to display the dev tools props (not usefull for the projects)*//* If you want to display the dev tools props (not usefull for the projects)*/
                          />
 
@@ -63,7 +63,7 @@ export default devTools;
 It has to be included in the Layout of the application, as an example in the starter kit and the demo app there is a `layout-initializer`
 ```javascript
 import React from 'react';
-import Layout from 'focus-components/components/layout';
+import Layout from 'sagess-components/components/layout';
 import MenuLeft from '../../views/menu/menu-left';
 import DevTools from '../dev-tools';
 
@@ -91,7 +91,7 @@ You have to add an explicit name property to your stores.
 
 ```javascript
 
-import {CoreStore} from 'focus-core/store';
+import {CoreStore} from 'sagess-core/store';
 
 /**
 * Store dealing with subjects about persons.
