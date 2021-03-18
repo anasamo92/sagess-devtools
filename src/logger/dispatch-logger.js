@@ -17,7 +17,7 @@ const createStoreLogger = (dispatcher, getStores) => {
     dispatcher.register(transferInfo => {
         const stores = getStores();
         if (!isArray(stores)) {
-            throw new Error(`${STORE_LOGGER} : you should provide a list of stores to read see focus-core/store/CoreStore.prototype._instances.`)
+            throw new Error(`${STORE_LOGGER} : you should provide a list of stores to read see sagess-core/store/CoreStore.prototype._instances.`)
         }
         const { type, data } = transferInfo.action;
         console.groupCollapsed(`%c ${STORE_LOGGER} : action ${type} ${Object.keys(data).join('')}`, CONSOLE_STYLE);

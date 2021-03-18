@@ -35,7 +35,7 @@ var createStoreLogger = function createStoreLogger(dispatcher, getStores) {
     dispatcher.register(function (transferInfo) {
         var stores = getStores();
         if (!(0, _isArray3.default)(stores)) {
-            throw new Error(STORE_LOGGER + ' : you should provide a list of stores to read see focus-core/store/CoreStore.prototype._instances.');
+            throw new Error(STORE_LOGGER + ' : you should provide a list of stores to read see sagess-core/store/CoreStore.prototype._instances.');
         }
         var _transferInfo$action = transferInfo.action,
             type = _transferInfo$action.type,
